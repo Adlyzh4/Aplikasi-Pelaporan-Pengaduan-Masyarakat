@@ -181,10 +181,10 @@ if (isset($_POST['ubahTanggapan'])) {
                                             <td>
                                                 <?php
                                                 if ($_SESSION['level'] != 'masyarakat') { ?>
-
-                                                    <input type="hidden" name="hapusTanggapan"
-                                                        value="<?= $d->id_tanggapan ?>"><button class="btn btn-danger"><i
-                                                            class="fa fa-trash"></i></button>
+                                                <form action="" method="post">
+                                                    <input type="hidden" name="id_tanggapan"
+                                                        value="<?= $d->id_tanggapan ?>"><button type="submit" name="hapusTanggapan" class="btn btn-danger"><i
+                                                            class="fa fa-trash"></i></button></form>
                                                 <?php }
                                                 ?>
                                             </td>

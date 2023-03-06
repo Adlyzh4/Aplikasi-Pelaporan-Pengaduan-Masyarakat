@@ -91,7 +91,7 @@ if (isset($_POST['ubahTanggapan'])) {
                                                     $q = mysqli_query($con, "SELECT * FROM `pengaduan` JOIN `masyarakat` WHERE pengaduan.nik = masyarakat.nik ");
                                                     while ($d = mysqli_fetch_object($q)) { ?>
                                                         <option value="<?= $d->id_pengaduan ?>">Id_Pengaduan : <?=
-                                                              $d->id_pengaduan ?>, Nama : <?= $d->Nama ?>, Nik : <?= $d->nik ?>
+                                                              $d->id_pengaduan ?>, Nama : <?= $d->nama ?>, Nik : <?= $d->nik ?>
                                                         <?php }
                                                     ?>
                                                     </option>
@@ -260,6 +260,7 @@ if (isset($_POST['ubahTanggapan'])) {
                 </div>
             </div>
         </div>
+    </div>
 
         <?php include('../assets/footer.php') ?>
 </body>
